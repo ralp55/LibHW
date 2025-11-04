@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+database:
+  driver: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5433/lib_db
+  username: ###
+  password: ###
+
+hikari:
+  maximum-pool-size: 10
+  minimum-idle: 5
+  connection-timeout: 30000
+  idle-timeout: 600000
+  max-lifetime: 1800000
+
+logging:
+  level:
+    root: WARN
+    com.library: INFO
+    org.springframework: INFO
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+    file: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/library-service.log
+    max-size: 10MB
+    max-history: 10
