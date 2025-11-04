@@ -19,7 +19,7 @@ public class AppConfig {
     }
 
     @Bean
-    public bookDTO bookDAO(authorDTO authorDTO, publisherDTO publisherDTO) {
+    public bookDTO bookDTO(authorDTO authorDTO, publisherDTO publisherDTO) {
         return new bookDTO(authorDTO, publisherDTO);
     }
 
