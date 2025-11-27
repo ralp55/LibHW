@@ -26,18 +26,14 @@ public interface LibControllerInterface {
     @DeleteMapping("/books/{id}")
     ResponseEntity<Map<String, Object>> deleteBook(@PathVariable Long id);
 
-
     @GetMapping("/books/author/{authorId}")
     ResponseEntity<Map<String, Object>> getBooksByAuthor(@PathVariable Long authorId);
-
 
     @GetMapping("/books/publisher/{publisherId}")
     ResponseEntity<Map<String, Object>> getBooksByPublisher(@PathVariable Long publisherId);
 
-
     @PostMapping("/authors")
     ResponseEntity<Map<String, Object>> createAuthor(@RequestBody author author);
-
 
     @GetMapping("/authors/{id}")
     ResponseEntity<Map<String, Object>> getAuthor(@PathVariable Long id);
